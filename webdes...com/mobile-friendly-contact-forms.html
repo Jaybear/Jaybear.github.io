@@ -1,20 +1,16 @@
-<!DOCTYPE html PUBLIC
-  "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-de" lang="de-de" dir="ltr" >
-
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
-  <!-- link rel="shortcut icon" type="image/x-icon" href="http://www.xyz.domain/sub-dir-s/favicon.ico" / -->
-  <link rel="stylesheet" type="text/css" href="./webdes...com/css/test-style.css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-  <title>Create mobile friendly Forms</title>
+  <title>Create mobile friendly Forms -- webdesignerdepot & Jaybear</title>
 
   <meta name="description" content="webdesignerdepot.com" />
   <!-- meta name="robots" content="noindex" / -->
-</head>
 
+  <!-- link rel="shortcut icon" type="image/x-icon" href="http://www.xyz.domain/sub-dir-s/favicon.ico" / -->
+  <!-- link rel="stylesheet" type="text/css" href="http://www.xyz.domain/sub-dir-s/mobile-friendly.css" / -->
 
 <style type="text/css">
   input[type=text]
@@ -35,47 +31,51 @@
 }
 
 input[type=checkbox] {
- width: 44px;
- height: 44px;
- -webkit-border-radius: 22px;
- -moz-border-radius: 22px;
- border-radius: 22px;
- border: 1px solid #bbb;
+  width: 44px;
+  height: 44px;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  border-radius: 22px;
+  border: 1px solid #bbb;
 }
 
 button[type=submit] {
- -webkit-appearance: none;
- -moz-appearance: none;
- display: block;
- margin: 1.5em 0;
- font-size: 1em;
- line-height: 2.5em;
- color: #333;
- font-weight: bold;
- height: 2.5em;
- width: 100%;
- background: #fdfdfd;
- background: -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%);
- background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#bebebe));
- background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
- background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
- background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
- background: linear-gradient(to bottom, #fdfdfd 0%,#bebebe 100%);
- border: 1px solid #bbb;
- -webkit-border-radius: 10px;
- -moz-border-radius: 10px;
- border-radius: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: block;
+  margin: 1.5em 0;
+  font-size: 1em;
+  line-height: 2.5em;
+  color: #333;
+  font-weight: bold;
+  height: 2.5em;
+  width: 100%;
+  background: #fdfdfd;
+  background: -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%);
+  background: -webkit-gradient(linear, left top, left bottom
+    , color-stop(0%,#fdfdfd), color-stop(100%,#bebebe));
+  background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+  background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+  background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+  background: linear-gradient(to bottom, #fdfdfd 0%,#bebebe 100%);
+  border: 1px solid #bbb;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
 
 input[type=range] {
- width: 100%;
+  width: 100%;
 }
+
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 44px;
   height: 44px;
   background: #fdfdfd;
   background: -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#bebebe));
+  background: -webkit-gradient(linear, left top, left bottom
+    , color-stop(0%,#fdfdfd), color-stop(100%,#bebebe));
   background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
   background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
   background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
@@ -89,9 +89,9 @@ input[type=range]::-webkit-slider-thumb {
   a[href^='tel:']:link
 , a[href^='tel:']:visited
 {
- color: #333;
- font-weight: bold;
- text-decoration: underline;
+  color: #333;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
   a[href^='tel:']:hover
@@ -131,25 +131,22 @@ input[type=range]::-webkit-slider-thumb {
     text-decoration: none;
   }
 }
+
+code {
+  background-color: #e0e0ff;
+}
 </style>
 
+</head>
 
-<body class="safesearch-installed firefox">
 
-<!-- header>
-  <h1><a href="http://web.de/menu"> ... WEB.DE ... </a></h1>
-  <nav>
-    <a href="http://web.de/"  class="control cancel"><span>web Start</span></a>
-    <a href="http://web.de/A" class="control cancel"><span>Neue Seite</span></a>
-    <a href="http://web.de/B" class="control cancel"><span>Nebenseite</span></a>
-  </nav>
-</header -->
+<body>
 
-<h3>
+<h2>
 <a href="http://www.webdesignerdepot.com/2013/03/how-to-make-your-contact-forms-mobile-friendly/"
 >How to make your contact forms mobile friendly</a>
-</h3>
-<h4>By Alex Gibson | CSS, HTML, Mobile | Mar 19, 2013</h4>
+</h2>
+<h3>By Alex Gibson | CSS, HTML, Mobile | Mar 19, 2013</h3>
 
 ...
 
@@ -161,90 +158,103 @@ and controls a much nicer experience for touchscreen users.
 Form input fields will benefit from large touch target areas:
 input styled
 
-<br /><br /><code>
-  input[type=text]
-, input[type=url]
-, input[type=email]
-, input[type=password]
-, input[type=tel]
-{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  display: block;
-  margin: 0;
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  font-size: 17px;
-  border: 1px solid #bbb;
-}
-</code><br /><br />
+<br /><br />
+<code>
+&nbsp;&nbsp;input[type=text]
+<br />, input[type=url]
+<br />, input[type=email]
+<br />, input[type=password]
+<br />, input[type=tel]
+<br />{
+<br />&nbsp;&nbsp;-webkit-appearance: none;
+<br />&nbsp;&nbsp;-moz-appearance: none;
+<br />&nbsp;&nbsp;display: block;
+<br />&nbsp;&nbsp;margin: 0;
+<br />&nbsp;&nbsp;width: 100%;
+<br />&nbsp;&nbsp;height: 40px;
+<br />&nbsp;&nbsp;line-height: 40px;
+<br />&nbsp;&nbsp;font-size: 17px;
+<br />&nbsp;&nbsp;border: 1px solid #bbb;
+<br />}
+</code>
+<br /><br />
 
 Other forms of input control would also easily benefit from custom CSS styling:
 Styled form controls
 
 Checkboxes benefit from being made easier to tap:
 
-<br /><br /><code>
+<br /><br />
+<code>
 input[type=checkbox] {
- width: 44px;
- height: 44px;
- -webkit-border-radius: 22px;
- -moz-border-radius: 22px;
- border-radius: 22px;
- border: 1px solid #bbb;
-}
-</code><br /><br />
+<br />&nbsp;&nbsp;width: 44px;
+<br />&nbsp;&nbsp;height: 44px;
+<br />&nbsp;&nbsp;-webkit-border-radius: 22px;
+<br />&nbsp;&nbsp;-moz-border-radius: 22px;
+<br />&nbsp;&nbsp;border-radius: 22px;
+<br />&nbsp;&nbsp;border: 1px solid #bbb;
+<br />}
+</code>
+<br /><br />
 
 Likewise, button elements can be styled and given special treatment:
 
-<br /><br /><code>
+<br /><br />
+<code>
 button[type=submit] {
- -webkit-appearance: none; -moz-appearance: none;
- display: block;
- margin: 1.5em 0;
- font-size: 1em;
- line-height: 2.5em;
- color: #333;
- font-weight: bold;
- height: 2.5em;
- width: 100%;
- background: #fdfdfd; background:
- -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%);
- background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#bebebe));
- background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
- background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
- background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
- background: linear-gradient(to bottom, #fdfdfd 0%,#bebebe 100%);
- border: 1px solid #bbb;
- -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;
-}
-</code><br /><br />
+<br />&nbsp;&nbsp;-webkit-appearance: none;
+<br />&nbsp;&nbsp;-moz-appearance: none;
+<br />&nbsp;&nbsp;display: block;
+<br />&nbsp;&nbsp;margin: 1.5em 0;
+<br />&nbsp;&nbsp;font-size: 1em;
+<br />&nbsp;&nbsp;line-height: 2.5em;
+<br />&nbsp;&nbsp;color: #333;
+<br />&nbsp;&nbsp;font-weight: bold;
+<br />&nbsp;&nbsp;height: 2.5em;
+<br />&nbsp;&nbsp;width: 100%;
+<br />&nbsp;&nbsp;background: #fdfdfd;
+<br />&nbsp;&nbsp;background: -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%);
+<br />&nbsp;&nbsp;background: -webkit-gradient(linear, left top, left bottom
+<br />&nbsp;&nbsp;, color-stop(0%,#fdfdfd), color-stop(100%,#bebebe)
+);
+<br />&nbsp;&nbsp;background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+<br />&nbsp;&nbsp;background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+<br />&nbsp;&nbsp;background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+<br />&nbsp;&nbsp;background: linear-gradient(to bottom, #fdfdfd 0%,#bebebe 100%);
+<br />&nbsp;&nbsp;border: 1px solid #bbb;
+<br />&nbsp;&nbsp;-webkit-border-radius: 10px;
+<br />&nbsp;&nbsp;-moz-border-radius: 10px;
+<br />&nbsp;&nbsp;border-radius: 10px;
+<br />}
+</code>
+<br /><br />
 
 Even less common input types, such as range sliders, would benefit from additional CSS styling:
 
-<br /><br /><code>
+<br /><br />
+<code>
 input[type=range] {
- width: 100%;
-}
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 44px;
-  height: 44px;
-  background: #fdfdfd;
-  background: -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#bebebe));
-  background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); 
-  background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
-  background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
-  background: linear-gradient(to bottom, #fdfdfd 0%,#bebebe 100%);
-  border: 1px solid #bbb;
-  -webkit-border-radius: 22px;
-  -moz-border-radius: 22px;
-  border-radius: 22px;
-}
-</code><br /><br />
-
+<br />&nbsp;&nbsp;width: 100%;
+<br />}
+<br />input[type=range]::-webkit-slider-thumb {
+<br />&nbsp;&nbsp;-webkit-appearance: none;
+<br />&nbsp;&nbsp;width: 44px;
+<br />&nbsp;&nbsp;height: 44px;
+<br />&nbsp;&nbsp;background: #fdfdfd;
+<br />&nbsp;&nbsp;background: -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%);
+<br />&nbsp;&nbsp;background: -webkit-gradient (linear, left top, left bottom
+<br />&nbsp;&nbsp;, color-stop(0%,#fdfdfd), color-stop(100%,#bebebe));
+<br />&nbsp;&nbsp;background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+<br />&nbsp;&nbsp;background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+<br />&nbsp;&nbsp;background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+<br />&nbsp;&nbsp;background: linear-gradient(to bottom, #fdfdfd 0%,#bebebe 100%);
+<br />&nbsp;&nbsp;border: 1px solid #bbb;
+<br />&nbsp;&nbsp;-webkit-border-radius: 22px;
+<br />&nbsp;&nbsp;-moz-border-radius: 22px;
+<br />&nbsp;&nbsp;border-radius: 22px;
+<br />}
+</code>
+<br />
 
 <h4>Use HTML5 input types to trigger the appropriate keyboard</h4>
 
@@ -256,29 +266,34 @@ for different forms of data.
 Here’s how the various soft keyboards appear on the iPhone (iOS 6), depending on the input type specified:
 <br /><br />
 
+Test eMail keyboard
+<br /><br />
+<label for="f_test">Test eMail: <input type="email" id="f_test" name="test" placeholder="jabberwocky@monpython.rat" /></label>
+<br /><br />
+
 URL keyboard
 <br /><br />
-<label for="website">Website:</label> <input type="url" name="website" placeholder="www.yourwebsite.com" />
+<label for="f_website">Website: <input type="url" id="f_website" name="website" placeholder="www.yourwebsite.com" /></label>
 <br /><br />
 
 Tel keyboard
 <br /><br />
-<label for="tel">Tel:</label> <input type="tel" name="tel" placeholder="Your telephone number" />
+<label for="f_tel">Tel: <input type="tel" id="f_tel" name="tel" placeholder="Your telephone number" /></label>
 <br /><br />
 
 Email keyboard
 <br /><br />
-<label for="email">Email:</label> <input type="email" name="email" placeholder="you@yourwebsite.com" />
+<label for="f_email">Email: <input type="email" id="f_email" name="email" placeholder="you@yourwebsite.com" /></label>
 <br /><br />
 
 Time picker
 <br /><br />
-<label for="time">Time:</label> <input type="time" name="time" placeholder="9:00 AM" />
+<label for="f_time">Time: <input type="time" id="f_time" name="time" placeholder="9:00 AM" /></label>
 <br /><br />
 
 Date picker
 <br /><br />
-<label for="date">Date:</label> <input type="date" name="date" placeholder="DD/MM/YYYY" />
+<label for="f_date">Date: <input type="date" id="f_date" name="date" placeholder="DD/MM/YYYY" /></label>
 <br /><br />
 
 <br />
@@ -294,63 +309,80 @@ will accidentally target digits that are not actually phone numbers. The links c
 depending on the styling applied to them.
 
 Fortunately, this auto-detect behavior can be disabled on both iOS and Android devices by inserting the following
-element in the <head> element of the web page:
+element in the &lt;head&gt; element of the web page:
 
-<br /><br /><code>
-<meta name="format-detection" content="telephone=no" />
-</code><br /><br />
+<br /><br />
+<code>
+&lt;meta name="format-detection" content="telephone=no" /&gt;
+</code>
+<br /><br />
 
 This enables you to manually specify telephone links on your web pages, giving you
 much greater control over where they appear and how they look:
 
-<br /><br /><code>
+<br /><br />
+<code>
 Tel: <a href="tel:14085555555">1 408 555 5555</a>
-</code><br /><br />
+</code>
+<br /><br />
 
 You can style a telephone link using the following CSS selector:
 
-<br /><br /><code>
+<br /><br />
+<code>
 a[href^='tel:']:link, a[href^='tel:']:visited {
- color: #333;
- font-weight: bold;
- text-decoration: underline;
-}
-a[href^='tel:']:hover, a[href^='tel:']:active {
-  text-decoration: none;
-}
-</code><br /><br />
+<br />&nbsp;&nbsp;color: #333;
+<br />&nbsp;&nbsp;font-weight: bold;
+<br />&nbsp;&nbsp;text-decoration: underline;
+<br />}
+<br />&nbsp;&nbsp;a[href^='tel:']:hover, a[href^='tel:']:active {
+<br />&nbsp;&nbsp;text-decoration: none;
+<br />}
+</code>
+<br /><br />
 
 The only downside to this manual approach is that desktop visitors will also be able to see
 these telephone links but won’t be able to activate them. One way around this is to apply
 tel link styling only to small viewports, using a CSS media query:
 
-<br /><br /><code>
+<br /><br />
+<code>
 /* unstyled tel links as default */
-a[href^='tel:']:link, a[href^='tel:']:visited {
- color: #6f757c;
- font-weight: normal;
-  text-decoration: none;
-}
-a[href^='tel:']:hover, a[href^='tel:']:active {
-  color: #6f757c;
-  text-decoration: none;
-}
-</code><br /><br />
+<br />&nbsp;&nbsp;a[href^='tel:']:link
+<br />, a[href^='tel:']:visited
+<br />{
+<br />&nbsp;&nbsp;color: #6f757c;
+<br />&nbsp;&nbsp;font-weight: normal;
+<br />&nbsp;&nbsp; text-decoration: none;
+<br />}
+<br />&nbsp;&nbsp;a[href^='tel:']:hover
+<br />, a[href^='tel:']:active {
+<br />&nbsp;&nbsp;color: #6f757c;
+<br />&nbsp;&nbsp;text-decoration: none;
+<br />}
+</code>
+<br /><br />
 
-<br /><br /><code>
+<br /><br />
+<code>
 /* styled tel links for small viewports */
 @media screen and (max-width: 600px) {
-  a[href^='tel:']:link, a[href^='tel:']:visited {
-    color: #333;
-    font-weight: bold;
-    text-decoration: underline;
-  }
-  a[href^='tel:']:hover, a[href^='tel:']:active {
-    color: #333;
-    text-decoration: none;
-  }
-}
-</code><br /><br />
+<br />&nbsp;&nbsp;&nbsp;&nbsp;a[href^='tel:']:link
+<br />&nbsp;&nbsp;, a[href^='tel:']:visited
+<br />&nbsp;&nbsp;{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;color: #333;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;font-weight: bold;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;text-decoration: underline;
+<br />&nbsp;&nbsp;}
+<br />&nbsp;&nbsp;&nbsp;&nbsp;a[href^='tel:']:hover
+<br />&nbsp;&nbsp;, a[href^='tel:']:active
+<br />&nbsp;&nbsp;{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;color: #333;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;
+<br />&nbsp;&nbsp;}
+<br />}
+</code>
+<br /><br />
 
 
 Control auto-correct and capitalization
