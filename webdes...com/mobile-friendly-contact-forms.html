@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<!-- Last Change: 10.09.2014 - 00:55 Jaybear -->
 <html>
 <head>
 
@@ -13,21 +14,54 @@
   <!-- link rel="stylesheet" type="text/css" href="http://www.xyz.domain/sub-dir-s/mobile-friendly.css" / -->
 
 <style type="text/css">
+label {
+  padding: 0 0.4em;
+}
+
   input[type=text]
 , input[type=url]
 , input[type=email]
 , input[type=password]
 , input[type=tel]
 {
-  margin: 0;
-  width: 100%;
+  margin: 0 0.25% 0 0.75%;
+  padding: 0 0.7%;
+  width: 97%;
   height: 40px;
   font-size: 17px;
   line-height: 40px;
   display: block;
   -webkit-appearance: none;
   -moz-appearance: none;
-  border: 1px solid #bbb;
+  border: 1px solid #bbd;
+}
+
+  input[type=time]
+, input[type=date]
+{
+  margin: 0 0.25% 0 0.75%;
+  padding: 0 0.7%;
+  width: 97%;
+  height: 40px;
+  font-size: 17px;
+  line-height: 40px;
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #dbb;
+}
+
+textarea {
+  margin: 0 0.25% 0 0.75%;
+  padding: 0 0.7%;
+  width: 97%;
+  /* height: 40px; */
+  font-size: 17px;
+  line-height: 40px;
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #dbb;
 }
 
 input[type=checkbox] {
@@ -135,6 +169,10 @@ input[type=range]::-webkit-slider-thumb {
 code {
   background-color: #e0e0ff;
 }
+
+.separated {
+  padding: 0.75em 0 0 0;
+}
 </style>
 
 </head>
@@ -148,9 +186,52 @@ code {
 </h2>
 <h3>By Alex Gibson | CSS, HTML, Mobile | Mar 19, 2013</h3>
 
-...
+<label for="f_test">Test eMail: &nbsp; &nbsp; (... with Test eMail keyboard)</label>
+<input type="email" id="f_test" name="test" placeholder="jabberwocky@monpython.info" />
 
-Style form inputs for easier touch control
+<label for="f_website">Website: &nbsp; &nbsp; (... with URL keyboard)
+<input type="url" id="f_website" name="website" placeholder="www.yourwebsite.com" /></label>
+
+<label for="f_tel">Tel: &nbsp; &nbsp; (... with Tel keyboard)
+<input type="tel" id="f_tel" name="tel" placeholder="Your telephone number" /></label>
+
+<label for="f_email">Email: &nbsp; &nbsp; (... with Email keyboard)
+<input type="email" id="f_email" name="email" placeholder="you@yourwebsite.com" /></label>
+
+<label for="f_time">Time: &nbsp; &nbsp; (... with Time picker)
+<input type="time" id="f_time" name="time" placeholder="9:00 AM" /></label>
+
+<br />
+
+<label for="f_date">Date: &nbsp; &nbsp; (... with Date picker)
+<input type="date" id="f_date" name="date" placeholder="DD/MM/YYYY" /></label>
+
+
+<hr>
+
+
+iOS in particular has a habit of auto-correcting and capitalizing form input data, but it
+allows you to control this behavior using the autocorrect and autocapitalize attributes:
+
+<br /><br />
+<input type="text" name="username" autocorrect="off" autocapitalize="off" />
+<br /><br />
+
+There are more configurable options for autocapitalize. You can also set the value to words,
+characters or sentences, but think carefully about where you apply these attributes.
+
+<br /><br />
+<input type="text" name="first-name" autocapitalize="words" />
+<input type="text" name="last-name" autocapitalize="words" />
+<input type="text" name="state" autocapitalize="characters" />
+<textarea name="comment" autocapitalize="sentences"></textarea>
+<br /><br />
+
+
+<hr>
+
+
+<h4>Style form inputs for easier touch control</h4>
 
 Applying touch-friendly CSS styling to form elements will make inputs, buttons
 and controls a much nicer experience for touchscreen users.
@@ -266,37 +347,13 @@ for different forms of data.
 Here’s how the various soft keyboards appear on the iPhone (iOS 6), depending on the input type specified:
 <br /><br />
 
-Test eMail keyboard
-<br /><br />
-<label for="f_test">Test eMail: <input type="email" id="f_test" name="test" placeholder="jabberwocky@monpython.rat" /></label>
-<br /><br />
+<hr>
 
-URL keyboard
-<br /><br />
-<label for="f_website">Website: <input type="url" id="f_website" name="website" placeholder="www.yourwebsite.com" /></label>
-<br /><br />
+<h4>... First Section of examples moved to Top of Page ...</h4>
 
-Tel keyboard
-<br /><br />
-<label for="f_tel">Tel: <input type="tel" id="f_tel" name="tel" placeholder="Your telephone number" /></label>
-<br /><br />
+<hr>
 
-Email keyboard
-<br /><br />
-<label for="f_email">Email: <input type="email" id="f_email" name="email" placeholder="you@yourwebsite.com" /></label>
-<br /><br />
-
-Time picker
-<br /><br />
-<label for="f_time">Time: <input type="time" id="f_time" name="time" placeholder="9:00 AM" /></label>
-<br /><br />
-
-Date picker
-<br /><br />
-<label for="f_date">Date: <input type="date" id="f_date" name="date" placeholder="DD/MM/YYYY" /></label>
-<br /><br />
-
-<br />
+<h4>... continued</h4>
 Note in these examples that we are also specifying placeholder text, using the placeholder attribute.
 This enables us to show the user an example of the type of data they are expected to enter in a particular field.
 
@@ -384,28 +441,19 @@ tel link styling only to small viewports, using a CSS media query:
 </code>
 <br /><br />
 
+<hr>
 
-Control auto-correct and capitalization
-
+<h4>Control auto-correct and capitalization</h4>
 iOS in particular has a habit of auto-correcting and capitalizing form input data.
 For some field types, this is very useful, but for others it can quickly cause frustration.
 For example, user names often mix letters and numbers. Fortunately, iOS allows you to control
 this behavior using the autocorrect and autocapitalize attributes:
 
-<br /><br />
-<input type="text" name="username" autocorrect="off" autocapitalize="off" />
-<br /><br />
+<hr>
 
-There are more configurable options for autocapitalize. You can also set the value to words,
-characters or sentences, but think carefully about where you apply these attributes.
+<h4>... Second Section of examples moved to Top of Page ...</h4>
 
-<br /><br />
-<input type="text" name="first-name" autocapitalize="words" />
-<input type="text" name="last-name" autocapitalize="words" />
-<input type="text" name="state" autocapitalize="characters" />
-<textarea name="comment" autocapitalize="sentences"></textarea>
-<br /><br />
-
+<hr>
 
 <h4>A note on browser support</h4>
 
@@ -424,6 +472,7 @@ Let us know in the comments.
 Featured image/thumbnail, contact image via Shutterstock.
 
 <hr>
+
 <footer>
   <span>© Jaybear and webdesignerdepot.com</span>
 </footer>
