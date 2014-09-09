@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-<!-- Last Change: 10.09.2014 - 00:55 Jaybear -->
 <html>
 <head>
 
@@ -28,6 +27,7 @@ label {
   padding: 0 0.7%;
   width: 97%;
   height: 40px;
+  background-color: #e8e8ff;
   font-size: 17px;
   line-height: 40px;
   display: block;
@@ -43,6 +43,7 @@ label {
   padding: 0 0.7%;
   width: 97%;
   height: 40px;
+  background-color: #ffe8e8;
   font-size: 17px;
   line-height: 40px;
   display: block;
@@ -53,11 +54,12 @@ label {
 
 textarea {
   margin: 0 0.25% 0 0.75%;
-  padding: 0 0.7%;
+  padding: 1% 0.7% 0;
   width: 97%;
   /* height: 40px; */
+  background-color: #ffe8e8;
   font-size: 17px;
-  line-height: 40px;
+  line-height: 130%;
   display: block;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -201,8 +203,6 @@ code {
 <label for="f_time">Time: &nbsp; &nbsp; (... with Time picker)
 <input type="time" id="f_time" name="time" placeholder="9:00 AM" /></label>
 
-<br />
-
 <label for="f_date">Date: &nbsp; &nbsp; (... with Date picker)
 <input type="date" id="f_date" name="date" placeholder="DD/MM/YYYY" /></label>
 
@@ -212,20 +212,20 @@ code {
 
 iOS in particular has a habit of auto-correcting and capitalizing form input data, but it
 allows you to control this behavior using the autocorrect and autocapitalize attributes:
-
-<br /><br />
+<br />
 <input type="text" name="username" autocorrect="off" autocapitalize="off" />
-<br /><br />
-
 There are more configurable options for autocapitalize. You can also set the value to words,
 characters or sentences, but think carefully about where you apply these attributes.
-
-<br /><br />
-<input type="text" name="first-name" autocapitalize="words" />
+<br />
+<!--input type="text" name="first-name" autocapitalize="words" />
 <input type="text" name="last-name" autocapitalize="words" />
 <input type="text" name="state" autocapitalize="characters" />
-<textarea name="comment" autocapitalize="sentences"></textarea>
-<br /><br />
+<textarea name="comment" autocapitalize="sentences"></textarea -->
+<input type="text" name="first-name" />
+<input type="text" name="last-name" />
+<input type="text" name="state" />
+<textarea name="comment" rows="4"></textarea>
+<br />
 
 
 <hr>
