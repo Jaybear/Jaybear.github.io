@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC
+  "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-de" lang="de-de" dir="ltr" >
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+  <!-- link rel="shortcut icon" type="image/x-icon" href="http://www.xyz.domain/sub-dir-s/favicon.ico" / -->
+  <!-- link rel="stylesheet" type="text/css" href="http://www.xyz.domain/sub-dir-s/mobile-friendly.css" / -->
+
+  <title>webdesignerdepot.com -- Create mobile friendly Forms</title>
+
+  <meta name="description" content="webdesignerdepot.com" />
+  <!-- meta name="robots" content="noindex" / -->
+</head>
+
+
+<style type="text/css">
+  input[type=text]
+, input[type=url]
+, input[type=email]
+, input[type=password]
+, input[type=tel]
+{
+  margin: 0;
+  width: 100%;
+  height: 40px;
+  font-size: 17px;
+  line-height: 40px;
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #bbb;
+}
+
+input[type=checkbox] {
+ width: 44px;
+ height: 44px;
+ -webkit-border-radius: 22px;
+ -moz-border-radius: 22px;
+ border-radius: 22px;
+ border: 1px solid #bbb;
+}
+
+button[type=submit] {
+ -webkit-appearance: none;
+ -moz-appearance: none;
+ display: block;
+ margin: 1.5em 0;
+ font-size: 1em;
+ line-height: 2.5em;
+ color: #333;
+ font-weight: bold;
+ height: 2.5em;
+ width: 100%;
+ background: #fdfdfd;
+ background: -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%);
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#bebebe));
+ background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+ background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+ background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+ background: linear-gradient(to bottom, #fdfdfd 0%,#bebebe 100%);
+ border: 1px solid #bbb;
+ -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ border-radius: 10px;
+
+input[type=range] {
+ width: 100%;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 44px;
+  height: 44px;
+  background: #fdfdfd;
+  background: -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#bebebe));
+  background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+  background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+  background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+  background: linear-gradient(to bottom, #fdfdfd 0%,#bebebe 100%);
+  border: 1px solid #bbb;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  border-radius: 22px;
+}
+
+  a[href^='tel:']:link
+, a[href^='tel:']:visited
+{
+ color: #333;
+ font-weight: bold;
+ text-decoration: underline;
+}
+
+  a[href^='tel:']:hover
+, a[href^='tel:']:active
+{
+  text-decoration: none;
+}
+
+/* unstyled tel links as default */
+  a[href^='tel:']:link
+, a[href^='tel:']:visited
+{
+  color: #6f757c;
+  font-weight: normal;
+  text-decoration: none;
+}
+  a[href^='tel:']:hover
+, a[href^='tel:']:active
+{
+  color: #6f757c;
+  text-decoration: none;
+}
+
+/* styled tel links for small viewports */
+@media screen and (max-width: 600px) {
+    a[href^='tel:']:link
+  , a[href^='tel:']:visited
+  {
+    color: #333;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+    a[href^='tel:']:hover
+  , a[href^='tel:']:active
+  {
+    color: #333;
+    text-decoration: none;
+  }
+}
+</style>
+
+
+<body class="safesearch-installed firefox">
+
+<!-- header>
+  <h1><a href="http://web.de/menu"> ... WEB.DE ... </a></h1>
+  <nav>
+    <a href="http://web.de/"  class="control cancel"><span>web Start</span></a>
+    <a href="http://web.de/A" class="control cancel"><span>Neue Seite</span></a>
+    <a href="http://web.de/B" class="control cancel"><span>Nebenseite</span></a>
+  </nav>
+</header -->
+
+<h3>
+<a href="http://www.webdesignerdepot.com/2013/03/how-to-make-your-contact-forms-mobile-friendly/"
+>How to make your contact forms mobile friendly</a>
+</h3>
+<h4>By Alex Gibson | CSS, HTML, Mobile | Mar 19, 2013</h4>
+
+...
+
+Style form inputs for easier touch control
+
+Applying touch-friendly CSS styling to form elements will make inputs, buttons
+and controls a much nicer experience for touchscreen users.
+
+Form input fields will benefit from large touch target areas:
+input styled
+
+<br /><br /><code>
+input[type=text], input[type=url], input[type=email], input[type=password], input[type=tel] {
+  -webkit-appearance: none; -moz-appearance: none;
+  display: block;
+  margin: 0;
+  width: 100%; height: 40px;
+  line-height: 40px; font-size: 17px;
+  border: 1px solid #bbb;
+}
+</code><br /><br />
+
+Other forms of input control would also easily benefit from custom CSS styling:
+Styled form controls
+
+Checkboxes benefit from being made easier to tap:
+
+<br /><br /><code>
+input[type=checkbox] {
+ width: 44px; height: 44px;
+ -webkit-border-radius: 22px; -moz-border-radius: 22px; border-radius: 22px;
+ border: 1px solid #bbb;
+}
+</code><br /><br />
+
+Likewise, button elements can be styled and given special treatment:
+
+<br /><br /><code>
+button[type=submit] {
+ -webkit-appearance: none; -moz-appearance: none;
+ display: block;
+ margin: 1.5em 0;
+ font-size: 1em; line-height: 2.5em;
+ color: #333;
+ font-weight: bold;
+ height: 2.5em; width: 100%;
+ background: #fdfdfd; background: -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#bebebe)); background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); background: linear-gradient(to bottom, #fdfdfd 0%,#bebebe 100%);
+ border: 1px solid #bbb;
+ -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;
+}
+</code><br /><br />
+
+Even less common input types, such as range sliders, would benefit from additional CSS styling:
+
+<br /><br /><code>
+input[type=range] {
+ width: 100%;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 44px; height: 44px;
+  background: #fdfdfd; background: -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#bebebe)); background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); background: linear-gradient(to bottom, #fdfdfd 0%,#bebebe 100%);
+  border: 1px solid #bbb;
+  -webkit-border-radius: 22px; -moz-border-radius: 22px; border-radius: 22px;
+}
+</code><br /><br />
+
+
+<h4>Use HTML5 input types to trigger the appropriate keyboard</h4>
+
+HTML5 offers a range of input types to aid the user experience. Some web browsers now offer
+multiple native controls, depending on the input type selected.
+This is especially useful for mobile browsers, some of which have different on-screen keyboards
+for different forms of data.
+
+Here’s how the various soft keyboards appear on the iPhone (iOS 6), depending on the input type specified:
+<br /><br />
+
+URL keyboard
+<br /><br />
+<label for="website">Website:</label> <input type="url" name="website" placeholder="www.yourwebsite.com" />
+<br /><br />
+
+Tel keyboard
+<br /><br />
+<label for="tel">Tel:</label> <input type="tel" name="tel" placeholder="Your telephone number" />
+<br /><br />
+
+Email keyboard
+<br /><br />
+<label for="email">Email:</label> <input type="email" name="email" placeholder="you@yourwebsite.com" />
+<br /><br />
+
+Time picker
+<br /><br />
+<label for="time">Time:</label> <input type="time" name="time" placeholder="9:00 AM" />
+<br /><br />
+
+Date picker
+<br /><br />
+<label for="date">Date:</label> <input type="date" name="date" placeholder="DD/MM/YYYY" />
+<br /><br />
+
+<br />
+Note in these examples that we are also specifying placeholder text, using the placeholder attribute.
+This enables us to show the user an example of the type of data they are expected to enter in a particular field.
+
+
+Style tap-to-call telephone links
+
+Some mobile browsers try to detect telephone numbers on web pages and convert them automatically to tappable links.
+This behavior is useful for visitors, but unfortunately auto-detection is not always reliable, and browsers
+will accidentally target digits that are not actually phone numbers. The links can also be difficult to tap,
+depending on the styling applied to them.
+
+Fortunately, this auto-detect behavior can be disabled on both iOS and Android devices by inserting the following
+element in the <head> element of the web page:
+
+<br /><br /><code>
+<meta name="format-detection" content="telephone=no" />
+</code><br /><br />
+
+This enables you to manually specify telephone links on your web pages, giving you
+much greater control over where they appear and how they look:
+
+<br /><br /><code>
+Tel: <a href="tel:14085555555">1 408 555 5555</a>
+</code><br /><br />
+
+You can style a telephone link using the following CSS selector:
+
+<br /><br /><code>
+a[href^='tel:']:link, a[href^='tel:']:visited {
+ color: #333;
+ font-weight: bold;
+ text-decoration: underline;
+}
+a[href^='tel:']:hover, a[href^='tel:']:active {
+  text-decoration: none;
+}
+</code><br /><br />
+
+The only downside to this manual approach is that desktop visitors will also be able to see
+these telephone links but won’t be able to activate them. One way around this is to apply
+tel link styling only to small viewports, using a CSS media query:
+
+<br /><br /><code>
+/* unstyled tel links as default */
+a[href^='tel:']:link, a[href^='tel:']:visited {
+ color: #6f757c;
+ font-weight: normal;
+  text-decoration: none;
+}
+a[href^='tel:']:hover, a[href^='tel:']:active {
+  color: #6f757c;
+  text-decoration: none;
+}
+</code><br /><br />
+
+<br /><br /><code>
+/* styled tel links for small viewports */
+@media screen and (max-width: 600px) {
+  a[href^='tel:']:link, a[href^='tel:']:visited {
+    color: #333;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  a[href^='tel:']:hover, a[href^='tel:']:active {
+    color: #333;
+    text-decoration: none;
+  }
+}
+</code><br /><br />
+
+
+Control auto-correct and capitalization
+
+iOS in particular has a habit of auto-correcting and capitalizing form input data.
+For some field types, this is very useful, but for others it can quickly cause frustration.
+For example, user names often mix letters and numbers. Fortunately, iOS allows you to control
+this behavior using the autocorrect and autocapitalize attributes:
+
+<br /><br />
+<input type="text" name="username" autocorrect="off" autocapitalize="off" />
+<br /><br />
+
+There are more configurable options for autocapitalize. You can also set the value to words,
+characters or sentences, but think carefully about where you apply these attributes.
+
+<br /><br />
+<input type="text" name="first-name" autocapitalize="words" />
+<input type="text" name="last-name" autocapitalize="words" />
+<input type="text" name="state" autocapitalize="characters" />
+<textarea name="comment" autocapitalize="sentences"></textarea>
+<br /><br />
+
+
+<h4>A note on browser support</h4>
+
+While many of the examples in this article highlight features on iOS Safari, some of the tips
+also apply to Android (depending on the browser version), as well as other mobile browsers.
+The good thing about HTML5 form features is that they progressively enhance.
+Browsers that support a feature will take advantage of it, while non-supporting browsers
+will generally just ignore it.
+
+
+<h4>Do mobile sites demand mobile-friendly forms?</h4>
+What other tips would you add?
+<br />
+Let us know in the comments.
+
+Featured image/thumbnail, contact image via Shutterstock.
+
+<hr>
+<footer>
+  <span>© Jaybear and webdesignerdepot.com</span>
+</footer>
+
+</body>
+
+</html>
