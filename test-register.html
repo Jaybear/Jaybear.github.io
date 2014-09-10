@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <title>Test-Register - Jaybear</title>
+
+  <meta name="description" content="somewhere.in-the-web.com" />
+  <!-- meta name="robots" content="noindex" / -->
+
+  <!-- link rel="shortcut icon" type="image/x-icon" href="http://www.xyz.domain/sub-dir-s/favicon.ico" / -->
+  <!-- link rel="stylesheet" type="text/css" href="http://www.xyz.domain/sub-dir-s/mobile-friendly.css" / -->
+
+<style type="text/css">
+label {
+  padding: 0 0.4em;
+}
+
+  input[type=text]
+, input[type=url]
+, input[type=email]
+, input[type=password]
+, input[type=tel]
+{
+  margin: 0 0.25% 0 0.75%;
+  padding: 0 0.7%;
+  width: 97%;
+  height: 40px;
+  background-color: #e8e8ff;
+  font-size: 17px;
+  line-height: 40px;
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #bbd;
+}
+
+  input[type=time]
+, input[type=date]
+{
+  margin: 0 0.25% 0 0.75%;
+  padding: 0 0.7%;
+  width: 97%;
+  height: 40px;
+  background-color: #ffe8e8;
+  font-size: 17px;
+  line-height: 40px;
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #dbb;
+}
+
+textarea {
+  margin: 0 0.25% 0 0.75%;
+  padding: 1% 0.7% 0;
+  width: 97%;
+  /* height: 40px; */
+  background-color: #ffe8e8;
+  font-size: 17px;
+  line-height: 130%;
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #dbb;
+}
+
+input[type=checkbox] {
+  width: 44px;
+  height: 44px;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  border-radius: 22px;
+  border: 1px solid #bbb;
+}
+
+button[type=submit] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: block;
+  margin: 1.5em 0;
+  font-size: 1em;
+  line-height: 2.5em;
+  color: #333;
+  font-weight: bold;
+  height: 2.5em;
+  width: 100%;
+  background: #fdfdfd;
+  background: -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%);
+  background: -webkit-gradient(linear, left top, left bottom
+    , color-stop(0%,#fdfdfd), color-stop(100%,#bebebe));
+  background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+  background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+  background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+  background: linear-gradient(to bottom, #fdfdfd 0%,#bebebe 100%);
+  border: 1px solid #bbb;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+input[type=range] {
+  width: 100%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 44px;
+  height: 44px;
+  background: #fdfdfd;
+  background: -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%);
+  background: -webkit-gradient(linear, left top, left bottom
+    , color-stop(0%,#fdfdfd), color-stop(100%,#bebebe));
+  background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+  background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+  background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%);
+  background: linear-gradient(to bottom, #fdfdfd 0%,#bebebe 100%);
+  border: 1px solid #bbb;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  border-radius: 22px;
+}
+
+  a[href^='tel:']:link
+, a[href^='tel:']:visited
+{
+  color: #333;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+  a[href^='tel:']:hover
+, a[href^='tel:']:active
+{
+  text-decoration: none;
+}
+
+/* unstyled tel links as default */
+  a[href^='tel:']:link
+, a[href^='tel:']:visited
+{
+  color: #6f757c;
+  font-weight: normal;
+  text-decoration: none;
+}
+  a[href^='tel:']:hover
+, a[href^='tel:']:active
+{
+  color: #6f757c;
+  text-decoration: none;
+}
+
+/* styled tel links for small viewports */
+@media screen and (max-width: 600px) {
+    a[href^='tel:']:link
+  , a[href^='tel:']:visited
+  {
+    color: #333;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+    a[href^='tel:']:hover
+  , a[href^='tel:']:active
+  {
+    color: #333;
+    text-decoration: none;
+  }
+}
+
+code {
+  background-color: #e0e0ff;
+}
+
+.separated {
+  padding: 0.75em 0 0 0;
+}
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="animated" ng-class="{shake: form.errorSubmission}">
+  <h1 class="ng-scope" translate="form.login.title">Melden Sie bitte an.</h1>
+  <div class="horizontal-separator"></div>
+
+  <form class="login-form ng-pristine ng-invalid ng-invalid-required" name="form.login" role="form" novalidate="" ng-submit="login()">
+      <div class="form-group" ng-class="{error: form.submitted &amp;&amp; form.login.email.$invalid}">
+          <label ng-hide="form.login.email.$viewValue.length &gt; 0" class="fallback-input ng-scope" for="email" translate="form.email">Email-Adresse</label>
+          <input focus="email" class="input-icon email-icon ng-pristine ng-invalid ng-invalid-required ng-valid-email ng-valid-pattern" name="email" id="email" maxlength="100" ng-model="user.email" placeholder="Email-Adresse" required="" ng-pattern="user.emailRegexp" type="email">
+          <sup></sup>
+
+          <div class="invalid">
+              <!-- ngIf: form.submitted && form.login.email.$invalid -->
+              <!-- ngIf: !(form.submitted && form.login.email.$invalid) --><div class="ng-scope" ng-if="!(form.submitted &amp;&amp; form.login.email.$invalid)" ng-init="form.login.0 = false"></div><!-- end ngIf: !(form.submitted && form.login.email.$invalid) -->
+          </div>
+      </div>
+
+      <div class="form-group" ng-class="{error: form.submitted &amp;&amp; form.login.password.$invalid}">
+          <label ng-hide="form.login.password.$viewValue.length &gt; 0" translate="form.password" for="password" class="fallback-input ng-scope">Passwort</label>
+          <input focus="password" class="input-icon pass-icon ng-pristine ng-invalid ng-invalid-required ng-valid-minlength" name="password" id="password" maxlength="64" autocomplete="off" ng-model="user.password" placeholder="Passwort" ng-minlength="5" required="" type="password">
+          <sup></sup>
+
+          <div class="invalid">
+              <!-- ngIf: form.submitted && form.login.password.$invalid -->
+              <!-- ngIf: !(form.submitted && form.login.password.$invalid) --><div class="ng-scope" ng-if="!(form.submitted &amp;&amp; form.login.password.$invalid)" ng-init="form.login.1 = false"></div><!-- end ngIf: !(form.submitted && form.login.password.$invalid) -->
+          </div>
+      </div>
+
+      <button class="btn btn-green ng-scope" ng-disabled="form.waitingResponse" translate="auth.login">Anmelden</button>
+
+      <div class="forgot-link">
+          <div class="log-check">
+              <input checked="checked" class="ng-pristine ng-valid" value="" id="rm" ng-model="user.remember" type="checkbox">
+              <label class="ng-scope" for="rm" translate="form.remember_me">Zugangsdaten speichern</label>
+          </div>
+          <a href="https://my.test.org/de/auth/forgot" class="ng-scope" ng-href="auth/forgot" translate="form.forgot_password">Passwort vergessen?</a>
+      </div>
+
+  </form>
+</div>
+
+
+<footer>
+  <span>Partial © & Tested by Jaybear</span>
+</footer>
+
+</body>
+
+</html>
